@@ -1,0 +1,27 @@
+{
+  "name": "testing_mocha-chai",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "nyc mocha test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "chai": "^5.1.2",
+    "mocha": "^10.8.2",
+    "nyc": "^17.1.0"
+  },
+  "nyc": {
+    "reporter": ["text", "html"],
+    "include": ["test/math.js"],
+    "exclude": ["test/math.test.js"]
+  }
+}
+
